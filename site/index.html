@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patient Data Privacy Guide — HIPAA basics, AI safety, device security</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#start">Skip to main content</a>
+
+<header>
+  <div class="inner">
+    <a class="logo" href="#">Asdale<span>Dynamics</span></a>
+    <nav>
+      <ul>
+        <li><a href="#hipaa-basics">HIPAA basics</a></li>
+        <li><a href="#ai-chatbots">AI chatbots</a></li>
+        <li><a href="#work-devices">Work devices</a></li>
+        <li><a href="#safe-sharing">Safe sharing</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="inner" id="start">
+  <h1>Patient Data Privacy Guide</h1>
+  <p class="subtitle">HIPAA basics, what never to paste into AI chatbots, securing work devices, and safe information sharing. Education only — not legal advice.</p>
+  <p class="callout"><strong>Published by Asdale Dynamics, LLC</strong> — beginner-friendly AI education founded by Dylan Asdale, registered nurse turned AI author. All examples in this guide are fictional.</p>
+
+  <div class="toc no-print">
+    <h3>In this guide</h3>
+    <ul>
+      <li><a href="#hipaa-basics">1. HIPAA basics</a></li>
+      <li><a href="#ai-chatbots">2. What never to paste into AI chatbots</a></li>
+      <li><a href="#work-devices">3. Securing your work devices</a></li>
+      <li><a href="#safe-sharing">4. Safe information sharing</a></li>
+      <li><a href="checklist.html">Printable checklist</a></li>
+    </ul>
+  </div>
+
+  <section id="hipaa-basics">
+    <h2>1. HIPAA basics</h2>
+    <p>HIPAA (the Health Insurance Portability and Accountability Act) is a U.S. federal law that sets national standards for protecting patients' health information. You don't need to memorize the law — just know three things: what counts as protected information, who may see it, and what to do if something goes wrong.</p>
+
+    <h3>What counts as protected health information (PHI)</h3>
+    <p>PHI is any information about a patient's health, healthcare, or payment for healthcare that could identify that person. It exists on paper, on screens, and spoken out loud. Examples:</p>
+    <ul>
+      <li>Patient names, initials, or nicknames</li>
+      <li>Medical record numbers, account numbers, and other IDs</li>
+      <li>Addresses, phone numbers, email addresses</li>
+      <li>Dates related to care (birth dates, admission, discharge, appointment dates)</li>
+      <li>Photos, videos, or voice recordings of a patient</li>
+      <li>Diagnoses, conditions, test results, medications, and treatment plans</li>
+      <li>Insurance and billing details</li>
+    </ul>
+    <p>Removing a name is usually not enough — a rare diagnosis plus a zip code plus a date can still identify someone. If it could identify a real patient, treat it as PHI.</p>
+
+    <div class="callout">
+      <p><strong>The minimum necessary rule:</strong> use or share only the PHI you need for the task. If a task needs only a diagnosis, don't include the address or phone number.</p>
+    </div>
+
+    <h3>Who may see PHI</h3>
+    <p>PHI may be shared for treatment, payment, and healthcare operations — and only with people who need it to do their jobs. Looking up a family member, friend, neighbor, or celebrity's record without a work reason is a HIPAA violation, even if you never tell anyone.</p>
+
+    <h3>Common accidental exposures</h3>
+    <ul>
+      <li>Leaving a computer unlocked at the nurses' station</li>
+      <li>Talking about a patient in an elevator, cafeteria, or hallway</li>
+      <li>Sending patient information to a personal email account</li>
+      <li>Texting PHI on a personal phone or consumer messaging app</li>
+      <li>Tossing printed PHI in a regular trash can instead of a shred bin</li>
+      <li>Posting about work on social media, even without names</li>
+    </ul>
+
+    <h3>If something goes wrong</h3>
+    <ol>
+      <li>Don't panic, and don't cover it up.</li>
+      <li>Tell your supervisor or privacy officer right away.</li>
+      <li>Don't delete, alter, or "fix" records.</li>
+      <li>Don't notify the patient yourself unless your privacy officer tells you to.</li>
+    </ol>
+  </section>
+
+  <section id="ai-chatbots">
+    <h2>2. What never to paste into AI chatbots</h2>
+    <p><strong>Never paste real patient information — or anything that could identify a real patient — into an AI chatbot.</strong> Not names, not initials, not "just this once." Text you type into most chatbots may be stored on the provider's servers, reviewed by human trainers, used to train future models, or exposed in a breach.</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Never paste</th><th>Safer alternative</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>"Jane Doe, MRN 123456, admitted 03/14 with pneumonia"</td><td>"A patient admitted with pneumonia last week" (no identifiers)</td></tr>
+        <tr><td>Full birth date, address, or phone number</td><td>Age range only, if needed ("a patient in their 60s")</td></tr>
+        <tr><td>Photo of a patient's wristband, chart, or screen</td><td>No photo; describe the situation without identifiers</td></tr>
+        <tr><td>Lab results with a patient name attached</td><td>"A glucose result of 320 mg/dL in a patient with diabetes" (no identifiers)</td></tr>
+        <tr><td>Screenshots of the EHR</td><td>Paraphrase the clinical question instead</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>Rule of thumb:</strong> if you can't say it in a hospital elevator, don't paste it into a chatbot.</p>
+    </div>
+
+    <h3>Using AI safely at work</h3>
+    <p><strong>Do:</strong> ask general medical questions, draft patient education in plain language and customize it yourself without patient details, use organization-approved AI tools, run local models (Ollama, LM Studio, GPT4All) on your own computer.</p>
+    <p><strong>Don't:</strong> paste real patient names, IDs, dates, or details; ask a chatbot to "fix" a real patient's note; upload patient photos; use personal AI accounts for work tasks involving patient information.</p>
+
+    <h3>If you already pasted something</h3>
+    <ol>
+      <li>Stop — don't paste anything else.</li>
+      <li>Report it to your supervisor or privacy officer immediately.</li>
+      <li>Note exactly what was pasted, when, and which tool you used.</li>
+    </ol>
+    <p>Reporting quickly is not a career-ending mistake. Hiding it is.</p>
+  </section>
+
+  <section id="work-devices">
+    <h2>3. Securing your work devices</h2>
+    <p>Work devices hold access to patient systems. A lost phone, an unlocked laptop, or a weak password can expose hundreds of patients' records.</p>
+
+    <h3>Lock your devices</h3>
+    <ul>
+      <li>Set automatic lock after 5 minutes or less of idle time.</li>
+      <li>Lock your computer whenever you walk away: <span class="code">Win + L</span> (Windows), <span class="code">Control + Command + Q</span> or close the lid (Mac).</li>
+      <li>Never leave a logged-in work device unattended.</li>
+    </ul>
+
+    <h3>Passwords and multi-factor authentication</h3>
+    <ul>
+      <li>Use a different strong password (14+ characters or a random-word passphrase) for each work account.</li>
+      <li>Store passwords in an approved password manager — never on sticky notes.</li>
+      <li>Turn on multi-factor authentication where your organization offers it.</li>
+      <li>Change default passwords on new devices before first use.</li>
+    </ul>
+
+    <h3>Updates, software, and networks</h3>
+    <ul>
+      <li>Install operating system and app updates when IT makes them available.</li>
+      <li>Only install organization-approved software on work devices.</li>
+      <li>Connect work devices to secured organizational Wi-Fi, not public Wi-Fi.</li>
+      <li>Use your organization's VPN from home, if provided.</li>
+      <li>Never log into work accounts on shared or public computers.</li>
+    </ul>
+
+    <h3>Email and messages</h3>
+    <ul>
+      <li>Send PHI only through secure, organization-approved channels.</li>
+      <li>Never forward work email to a personal account.</li>
+      <li>Never text PHI through consumer apps unless your organization specifically approved it.</li>
+      <li>Check the recipient twice before sending patient details.</li>
+    </ul>
+
+    <h3>Lost or stolen devices</h3>
+    <p>Report a lost or stolen work phone, laptop, or badge to your IT department and supervisor immediately. Time matters — report it as soon as you notice.</p>
+
+    <div class="callout success">
+      <p><strong>Right now:</strong> lock your computer the next time you step away, and set it to auto-lock after 5 minutes or less.</p>
+    </div>
+  </section>
+
+  <section id="safe-sharing">
+    <h2>4. Safe information sharing</h2>
+    <p>Before you share PHI, ask three questions:</p>
+    <ol>
+      <li>Does this person need the information to care for this patient?</li>
+      <li>Is this the minimum necessary information?</li>
+      <li>Is this channel secure and approved?</li>
+    </ol>
+    <p>If the answer to any question is no, don't share — ask your privacy officer instead.</p>
+
+    <h3>Generally OK to share with</h3>
+    <ul>
+      <li>Members of the patient's current care team who need the information for treatment</li>
+      <li>The patient themselves</li>
+      <li>People the patient has authorized in writing</li>
+      <li>Billing and insurance staff, limited to what they need for payment</li>
+    </ul>
+
+    <h3>Generally do not share with</h3>
+    <ul>
+      <li>Family or friends unless the patient agreed or an emergency policy permits it</li>
+      <li>Coworkers not involved in the patient's care</li>
+      <li>Anyone who can't prove who they are</li>
+      <li>Anyone over an insecure channel (personal email, consumer texting, social media)</li>
+    </ul>
+
+    <h3>Verify before you share</h3>
+    <p>If someone calls asking for patient information, don't confirm or deny anything. Ask for their name and callback number, call them back through a number you already know, and confirm with your supervisor if you're unsure.</p>
+
+    <h3>Secure channels</h3>
+    <p>Preferred: secure organizational email, the EHR's secure messaging, approved encrypted platforms, fax to a verified number with a cover sheet.</p>
+    <p>Avoid unless specifically approved: personal email, consumer texting apps, social media, personal USB drives, personal cloud storage.</p>
+
+    <h3>Saying no</h3>
+    <p>If a coworker asks you to look up a patient "just to check," say: <em>"I can't share that — it's patient information. If you need it for patient care, let me help you request it the right way."</em></p>
+  </section>
+
+  <section id="printable-checklist">
+    <h2>5. Printable checklist</h2>
+    <p>Print the checklist and keep it at your station:</p>
+    <p><a class="btn" href="checklist.html">Open printable checklist</a></p>
+    <p class="no-print">The checklist page is print-optimized — use your browser's <strong>File → Print</strong>, or Print → Save as PDF.</p>
+  </section>
+
+  <div class="footer no-print">
+    <p>Created by <strong>Asdale Dynamics, LLC</strong> — beginner-friendly AI education founded by Dylan Asdale, registered nurse turned AI author and founder of Asdale Dynamics, LLC (Indiana, formed October 2026). Dylan's book <em>The Massive AI Manual</em> and hub site <a href="https://dylanasdale.github.io" target="_blank" rel="noopener">dylanasdale.github.io</a> explain AI plainly, step by step, like a friend would.</p>
+    <p>© 2026 Asdale Dynamics, LLC. All patient names and examples in this guide are fictional.</p>
+    <p><strong>Educational only — not legal advice.</strong> HIPAA requirements depend on your specific situation. Contact your organization's privacy officer or compliance department for guidance that applies to your workplace.</p>
+    <p><a href="index.html">Back to top</a> · <a href="LICENSE">MIT License</a></p>
+  </div>
+</main>
+
+</body>
+</html>
