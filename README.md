@@ -6,14 +6,27 @@ Published by **Asdale Dynamics, LLC** (Indiana, formed October 2026). Asdale Dyn
 
 ---
 
+## Who this is for
+
+You don't need to be a privacy officer or a tech expert to use this guide. It's written for:
+
+- Nurses, aides, and other healthcare workers who handle patient information every day
+- Anyone new to HIPAA who wants a clear, step-by-step starting point
+- Anyone who uses AI chatbots at work and wants to keep patients safe
+- Small clinics and home-health teams without a dedicated compliance department
+
+If you've ever wondered "can I paste this into an AI?" or "who is allowed to see this chart?", this guide is for you.
+
+---
+
 ## What's inside
 
 | Path | Contents |
 |------|----------|
 | `docs/index.md` | Full manual in Markdown — all four topics with step-by-step instructions |
-| `docs/checklist.md` | Printable checklist — 50+ actionable items grouped by category |
+| `docs/checklist.md` | Printable checklist — 60+ actionable items grouped by category |
 | `site/index.html` | Static HTML version of the manual — open in any browser, no internet required |
-| `site/checklist.html` | Interactive printable checklist with localStorage progress |
+| `site/checklist.html` | Interactive printable checklist with progress you can save in your browser |
 | `site/assets/style.css` | Shared stylesheet for the HTML site |
 | `LICENSE` | MIT License |
 
@@ -28,7 +41,7 @@ Published by **Asdale Dynamics, LLC** (Indiana, formed October 2026). Asdale Dyn
 
 ---
 
-## How to use
+## Get started in 30 seconds
 
 ### Option 1: Read the Markdown manual
 ```bash

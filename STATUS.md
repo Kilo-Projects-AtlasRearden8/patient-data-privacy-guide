@@ -4,7 +4,7 @@
 
 **Location:** `/workspace/kilo-lab/patient-data-privacy-guide`  
 **Date:** October 30, 2026  
-**Git commits:** (see `git log`)
+**Git commits:** `12e41b6` (initial), plus improvements commit (pending)
 
 ---
 
@@ -14,13 +14,13 @@
 | File | Description |
 |------|-------------|
 | `index.md` | Complete beginner manual covering HIPAA basics, what never to paste into AI chatbots, securing work devices, safe information sharing, plus a quick-reference never-share list |
-| `checklist.md` | Printable checklist with ~60 actionable items grouped into 5 categories plus emergency contacts |
+| `checklist.md` | Printable checklist with 60+ actionable items grouped into 5 categories plus emergency contacts |
 
 ### Static HTML Site (`site/`)
 | File | Description |
 |------|-------------|
 | `index.html` | Full manual as single-page HTML with sticky table of contents, smooth scrolling, responsive design, print-ready |
-| `checklist.html` | Interactive printable checklist with localStorage progress persistence |
+| `checklist.html` | Interactive printable checklist with localStorage progress persistence and a reset-progress button |
 | `assets/style.css` | Shared stylesheet with print styles, responsive breakpoints at 600px |
 
 ### Verification (`verify.py`, `verify.sh`)
@@ -106,13 +106,18 @@ VERIFICATION PASSED
 - ✅ Responsive breakpoint at 600px
 - ✅ No external dependencies, no CDN, no JavaScript frameworks
 
+### Local HTTP Smoke Test
+- ✅ `site/index.html` — HTTP 200
+- ✅ `site/checklist.html` — HTTP 200
+- ✅ `site/assets/style.css` — HTTP 200
+
 ### Content Completeness
 All required topics covered:
 - ✅ HIPAA basics — PHI definition, minimum necessary rule, who may see PHI, accidental exposures, breach response
 - ✅ What never to paste into AI chatbots — never-paste table with safer alternatives, safe AI use, local-first option, incident steps
 - ✅ Securing work devices — auto-lock, passwords, MFA, updates, networks, email, lost/stolen devices, disposal
 - ✅ Safe information sharing — three-question test, who to share/not share with, verification, secure channels, saying no
-- ✅ Printable checklist (~60 items across 5 categories + emergency contacts)
+- ✅ Printable checklist (60+ items across 5 categories + emergency contacts)
 
 ### Licensing & Attribution
 - ✅ LICENSE contains exact copyright line: `Copyright (c) 2026 Asdale Dynamics, LLC`
@@ -134,8 +139,7 @@ All required topics covered:
 1. **No automated CI/CD** — Verification script exists but isn't wired into any CI system (intentionally, no `.github/workflows`)
 2. **No PDF export** — Checklist/manual are print-optimized HTML; users can "Print to PDF" from browser
 3. **No search** — Single-page manual relies on browser Find (Ctrl/Cmd+F)
-4. **No state reset button** — Checklist progress persists in localStorage; clear browser data to reset
-5. **No HIPAA citation depth** — Guide explains rules in plain English without quoting regulation text by section (by design for beginners)
+4. **No HIPAA citation depth** — Guide explains rules in plain English without quoting regulation text by section (by design for beginners)
 
 ---
 

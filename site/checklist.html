@@ -33,6 +33,10 @@
       <span id="progress-count">0 / 0 items</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <p style="margin-top:0.6rem;">
+      <button id="reset-progress" class="btn btn-outline" style="padding:0.35rem 0.8rem; font-size:0.85rem;">Reset progress</button>
+      <span style="font-size:0.85rem; color:var(--text-muted); margin-left:0.5rem;">Progress is saved in your browser only — nothing is sent anywhere.</span>
+    </p>
   </div>
 
   <div class="print-note">
@@ -178,6 +182,17 @@
   checkboxes.forEach(function (cb) {
     cb.addEventListener('change', function () { save(); render(); });
   });
+
+  var resetBtn = document.getElementById('reset-progress');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      if (!confirm('Reset all checklist progress?')) return;
+      try { localStorage.removeItem('pdp-checklist'); } catch (e) {}
+      checkboxes.forEach(function (cb) { cb.checked = false; });
+      save();
+      render();
+    });
+  }
 
   load();
 })();
